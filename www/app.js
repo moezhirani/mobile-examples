@@ -1,6 +1,9 @@
 $(document).ready(function() {
     var counter = 0;
+//    update_button('#go', counter);
     $('#go').val(counter);
+    $("#go").prev().find('span').text(counter);
+
     $('#go').click(function() {
         counter++;
         $('#go').val(counter);
