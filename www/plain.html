@@ -9,11 +9,20 @@
 
 <h2>Plain JavaScript Number Guessing Game</h2>
 
-<button id="start">Start</button>
 <div id="game">
-<input type="text" placeholder="Guess number between 1 and 200" id="guess" />
-<button id="check">Guess</button>
-<div id="response"></div>
+  <button id="start">Start</button>
+
+  <div class="playground">
+    Guess number between 1 and 200<br>
+    <input type="number" id="guess" min="1" max="200" /> <button id="check-guess">Guess</button>
+  </div>
+
+  <div id="response"></div>
+
+  <div class="playground">
+    <br>
+    <button id="quit">Quit</button>
+  </div>
 </div>
 
 <p>Copyright Gabor Szabo</p>
