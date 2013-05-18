@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     $('#send').click(function() {
-        var url = 'http://perl5maven.com/search';
+        var url = 'http://perlmaven.com/search';
         var data = {
             "keyword" : $('#q').val()
         };
@@ -32,13 +32,14 @@ $(document).ready(function() {
         for (var prop in data ) {
             count++;
             single = '/' + prop;
-            html += '<li><a href="http://perl5maven.com/' + prop + '">';
+            html += '<li><a href="http://perlmaven.com/' + prop + '">';
             html += data[prop] + '</a></li>';
         }
         html += '</ul>';
         if (count == 0) {
             html = 'No result';
         }
+        console.log(html);
         $('#result').html(html);
     }
 });
