@@ -4,6 +4,7 @@ function start() {
   document.getElementById('start').style.display = 'none';
   toggle('playground', 'block');
   target = Math.floor(Math.random()*200);
+  response('');
   return false;
 }
 
@@ -29,17 +30,18 @@ function quit() {
 
 function check_guess() {
   var guess = document.getElementById('guess').value;
-  //response(guess);
-  //return false;
+
+  console.log('Target: ' + target + '  Guess: ' + guess);
+
   if (guess == '') {
     response('Invalid guess');
   } else if (guess < target) {
-    response('Your guess was too low');
+    response('Your guess ' + guess + ', was too low');
   } else if (guess > target) {
-    response('Your guess was too high');
+    response('Your guess ' + guess + ', was too high');
   } else {
-    response('Correct');
-    //hide the input window and show the start button
+    response('Correct: ' + guess);
+    quit();
   }
 
   return false;
