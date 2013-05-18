@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
- <!-- version 0.0.1 -->
  <title>Plain JavaScript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="plain.css" type="text/css" />
+  <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 
-<h1>Form</h1>
-<form>
-Email: <input type="email" id="email"><br>
-Number: <input type="number" id="number"><br>
-</form>
+<h1>Plain JavaScript Number Guessing Game</h1>
 
-<p>
-</p>
-
+<div id="game">
+<button id="start">Start</button>
+<input type="text" placeholder="Guess number between 1 and 200" id="guess" />
+<button id="check">Guess</button>
+<div id="response"></div>
+</div>
 
 <p>Copyright Gabor Szabo</p>
 </body>
