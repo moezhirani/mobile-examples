@@ -18,16 +18,28 @@
   <div data-role="content">
     <a href="#transition-page" data-role="button">transitions</a>
     <a href="#counter-page" data-role="button">counter</a>
-    <br>
-    Search the Perl Maven site:
-    <input id="q" name="q" />
-    <input type="submit" value="Send" id="send" />
-    <div id="result"></div>
+    <a href="#search-page" data-role="button">search</a>
   </div>
   <div data-role="footer" data-position="fixed" >
     <a href="#about-page" data-role="button" data-icon="about">about</a>
+    <a href="index.html" data-role="button" data-icon="home">home</a>
   </div>
 </div>
+
+<div data-role="page" id="search-page">
+  <div data-role="header">
+     <a href="#main-page" data-role="button" data-icon="home">Home</a>
+        <h1>Search the Perl Maven site</h1>
+  </div>
+  <div data-role="content">
+    <p>
+    <input id="q" name="q" />
+    <input type="submit" value="Send" id="send" />
+    <div id="result"></div>
+    </p>
+  </div>
+</div>
+
 
 <div data-role="page" id="counter-page">
   <div data-role="header">
