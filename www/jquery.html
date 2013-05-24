@@ -16,6 +16,7 @@
     <h1>JQuery Mobile</h1>
   </div>
   <div data-role="content">
+    <a href="#transition-page" data-role="button">transitions</a>
     <input type="button" id="go" value="23" />
     <br>
     Search the Perl Maven site:
@@ -41,6 +42,47 @@
     <h4>This is the end</h4>
   </div>
 </div>
+
+<div data-role="page" id="transition-page">
+  <div data-role="header">
+     <a href="#main-page" data-role="button" data-icon="home">Home</a>
+        <h1>Transitions</h1>
+  </div>
+  <div data-role="content">
+    <!-- cannot transition to the same page in two different ways -->
+    <p>
+        <a href="#transition-target-dialog" data-role="button" data-rel="dialog" data-transition="fade" data-inline="true" data-theme="b">fade dialog</a>
+        <a href="#transition-target-page" data-role="button"                   data-transition="fade" data-inline="true">fade page</a>
+    </p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+  </div>
+</div>
+
+<div data-role="page" id="transition-target-dialog">
+  <div data-role="header" data-theme="b">
+        <h1>About</h1>
+  </div>
+  <div data-role="content">
+    <p>Hello Perl Maven</p>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>This is the end</h4>
+  </div>
+</div>
+
+<div data-role="page" id="transition-target-page">
+  <div data-role="header" data-theme="b">
+        <h1>About</h1>
+  </div>
+  <div data-role="content">
+    <p>Hello Perl Maven</p>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>This is the end</h4>
+  </div>
+</div>
+
 
 
 </body>
