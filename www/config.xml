@@ -2,11 +2,11 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "com.szabgab.mobile1"
-    versionCode="4"
-    version   = "0.0.4">
-  <name>Mobile Test 1</name>
+    versionCode="5"
+    version   = "0.0.5">
+  <name>Mobile Examples</name>
   <description>
-    Testing mobile applications
+    Mobile Application Examples
   </description>
 
   <author href="http://szabgab.com" email="szabgab@gmail.com">
