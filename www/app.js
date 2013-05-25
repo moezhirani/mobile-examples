@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('#echo').html('');
 	});
 
-	<!-- ajax: GET,  return plain HTML -->
+	<!-- ajax: GET,  receive plain HTML -->
     $('#echo-get').click(function() {
         var url = 'http://mobile.szabgab.com/echo?txt=' + $('#txt').val();
         $.ajax({
@@ -32,7 +32,7 @@ $(document).ready(function() {
         $('#echo').html(data);
 	}
 
-	<!-- ajax: GET  send and receive JSON -->
+	<!-- ajax: GET,  receive JSON -->
     $('#echo-get-json').click(function() {
         var url = 'http://mobile.szabgab.com/echo.json';
         var data = {
@@ -54,7 +54,21 @@ $(document).ready(function() {
         $('#echo').html(html);
 	}
 
-	<!-- TODO ajax: POST -->
+	<!-- ajax: POST, receive JSON -->
+    $('#echo-post-json').click(function() {
+        var url = 'http://mobile.szabgab.com/echo.json';
+        var data = {
+            "txt" : $('#txt').val()
+        };
+        $.ajax({
+			type: "POST",
+            url: url,
+            data: data,
+            dataType: "json",
+            success: display_echo_get_json
+        });
+        return false;
+	});
 
 	<!-- ajax: GET request, JSON reply -->
     $('#send').click(function() {
