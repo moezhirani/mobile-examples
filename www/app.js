@@ -13,6 +13,50 @@ $(document).ready(function() {
         return false;
     });
 
+	<!-- clear the echo response field -->
+    $('#echo-clear').click(function() {
+        $('#echo').html('');
+	});
+
+	<!-- ajax: GET,  return plain HTML -->
+    $('#echo-get').click(function() {
+        var url = 'http://mobile.szabgab.com/echo?txt=' + $('#txt').val();
+        $.ajax({
+            url: url,
+            success: display_echo_get
+        });
+        return false;
+	});
+	function display_echo_get(data) {
+        console.log(data);
+        $('#echo').html(data);
+	}
+
+	<!-- ajax: GET  send and receive JSON -->
+    $('#echo-get-json').click(function() {
+        var url = 'http://mobile.szabgab.com/echo.json';
+        var data = {
+            "txt" : $('#txt').val()
+        };
+        $.ajax({
+            url: url,
+            data: data,
+            dataType: "json",
+            success: display_echo_get_json
+        });
+        return false;
+	});
+	function display_echo_get_json(data) {
+        console.log(data);
+		var html = 'Method: ' + data["method"] + '<br>';
+		html += 'Txt: ' + data["txt"] + '<br>';
+		html += 'Server time: ' + data["time"] + '<br>';
+        $('#echo').html(html);
+	}
+
+	<!-- TODO ajax: POST -->
+
+	<!-- ajax: GET request, JSON reply -->
     $('#send').click(function() {
         var url = 'http://perlmaven.com/search';
         var data = {
@@ -43,3 +87,5 @@ $(document).ready(function() {
         $('#result').html(html);
     }
 });
+
+
