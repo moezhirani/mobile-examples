@@ -13,7 +13,7 @@
     Gabor Szabo
   </author>
 
-  <preference name="phonegap-version" value="2.5.0" />
+  <preference name="phonegap-version" value="2.7.0" />
   <preference name="android-minSdkVersion" value="7" />
   <!-- If you do not want any permissions to be added to your app, add the
     following tag to your config.xml; you will still have the INTERNET
